@@ -59,37 +59,72 @@
 //     console.log('Произошла ошибка. Попробуйте еще раз')
 // }
 
-function calculateBmi() {
-    this.bmi = this.weight / this.heith **2
-    return this.bmi
+const nowYear = 2024
+function calculateAge() {
+    this.age = nowYear - this.birthYear
+    return this.age
 }
 
+
+function calculateBmi() {
+    this.bmi = this.weight / this.heigth **2
+    return this.bmi
+}
 
 
 const andrey = {
     name: 'Andrey',
     weight: 97,
-    heith: 1.83,
-    calculateBmi
+    heigth: 1.83,
+    birthYear: 1992,
+    calculateBmi,
+    calculateAge  
 }
 
 const vadim = {
     name: 'Vadim',
     weight: 93,
-    heith: 1.82,
-    calculateBmi
+    heigth: 1.82,
+    birthYear: 1994,
+    calculateBmi,
+    calculateAge
+    
+}
+
+const sergey = {
+    name: 'Sergey',
+    weight: 105,
+    heigth: 1.89,
+    birthYear: 1985,
+    calculateBmi,
+    calculateAge
+    
 }
 
 andrey.calculateBmi()
 vadim.calculateBmi()
+sergey.calculateBmi()
+andrey.calculateAge()
+vadim.calculateAge()
+
 
 console.log(andrey.bmi)
 console.log(vadim.bmi)
+console.log(sergey.bmi)
 
 if(andrey.bmi > vadim.bmi) {
     console.log(`Иднекс массы ${andrey.name} ${andrey.bmi} больше, чем индекс ${vadim.name} ${vadim.bmi}`)
-} else if(andrey < vadim.bmi) {
-    h
+} else if(andrey.bmi < vadim.bmi) {
+    console.log(`Иднекс массы ${vadim.name} ${vadim.bmi} больше, чем индекс ${andrey.name} ${andrey.bmi}`)
+} else {
+    console.log(`Ошибка`)
 }
 
-New new1sss
+
+
+
+
+
+
+
+
