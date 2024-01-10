@@ -49,7 +49,7 @@
 // denis.calcBmi()
 
 // console.log(piter.bmiRes)
-// console.log(denis.bmiRes) 
+// console.log(denis.bmiRes)
 
 // if(piter.bmiRes > denis.bmiRes) {
 //     console.log(`Индекс массы тела ${piter.name} ${piter.bmiRes}, больше чем у ${denis.name} ${denis.bmiRes}`)
@@ -59,35 +59,127 @@
 //     console.log('Произошла ошибка. Попробуйте еще раз')
 // }
 
-function calculateBmi() {
-    this.bmi = this.weight / this.heith **2
-    return this.bmi
+// --------------------------------------------------------------------------------
+
+// const nowYear = 2024
+// function calculateAge() {
+//     this.age = nowYear - this.birthYear
+//     return this.age
+// }
+
+// function calculateBmi() {
+//     this.bmi = this.weight / this.heigth **2
+//     return this.bmi
+// }
+
+// const andrey = {
+//     name: 'Andrey',
+//     weight: 97,
+//     heigth: 1.83,
+//     birthYear: 1992,
+//     calculateBmi,
+//     calculateAge
+// }
+
+// const vadim = {
+//     name: 'Vadim',
+//     weight: 93,
+//     heigth: 1.82,
+//     birthYear: 1994,
+//     calculateBmi,
+//     calculateAge
+
+// }
+
+// const sergey = {
+//     name: 'Sergey',
+//     weight: 105,
+//     heigth: 1.89,
+//     birthYear: 1985,
+//     calculateBmi,
+//     calculateAge
+
+// }
+
+// andrey.calculateBmi()
+// vadim.calculateBmi()
+// sergey.calculateBmi()
+// andrey.calculateAge()
+// vadim.calculateAge()
+
+// console.log(andrey.bmi)
+// console.log(vadim.bmi)
+// console.log(sergey.bmi)
+
+// if(andrey.bmi > vadim.bmi) {
+//     console.log(`Иднекс массы ${andrey.name} ${andrey.bmi} больше, чем индекс ${vadim.name} ${vadim.bmi}`)
+// } else if(andrey.bmi < vadim.bmi) {
+//     console.log(`Иднекс массы ${vadim.name} ${vadim.bmi} больше, чем индекс ${andrey.name} ${andrey.bmi}`)
+// } else {
+//     console.log(`Ошибка`)
+// }
+
+const nowYear = 2024;
+
+function calcAge() {
+  this.age = nowYear - this.birthDay;
+  return this.age;
 }
 
-
-
-const andrey = {
-    name: 'Andrey',
-    weight: 97,
-    heith: 1.83,
-    calculateBmi
+function calcExpirience() {
+  this['workExpirience'] = nowYear - this.workStart;
+  return this.workExpirience;
 }
 
-const vadim = {
-    name: 'Vadim',
-    weight: 93,
-    heith: 1.82,
-    calculateBmi
+const userOne = {
+  name: "Valodya",
+  birthDay: 1990,
+  weight: 86,
+  height: 1.89,
+  country: "Belorus",
+  city: "Minsk",
+  workStart: 2010,
+  calcAge,
+  calcExpirience,
+};
+
+const userSecond = {
+  name: "Dima",
+  birthDay: 1983,
+  weight: 89,
+  heigth: 1.78,
+  countyry: "USA",
+  city: "New York",
+  workStart: 2002,
+  calcAge,
+  calcExpirience
+};
+
+const userThree = {
+  name: "Vika",
+  birthDay: 1999,
+  weight: 55,
+  heigth: 1.75,
+  country: "Russia",
+  city: "Moskou",
+  workStart: 1995,
+  calcAge,
+  calcExpirience
+};
+
+function useFun() {
+  userOne.calcAge();
+  console.log(userOne.calcAge());
+  userOne.calcAge();
+  console.log(userSecond.calcAge());
+  userOne.calcAge();
+  console.log(userThree.calcAge());
+  userOne.calcExpirience();
+  userSecond.calcExpirience();
+  userThree.calcExpirience();
+  console.log(userOne.workExpirience)
+  console.log(userSecond.workExpirience)
+  console.log(userThree.workExpirience)
 }
 
-andrey.calculateBmi()
-vadim.calculateBmi()
-
-console.log(andrey.bmi)
-console.log(vadim.bmi)
-
-if(andrey.bmi > vadim.bmi) {
-    console.log(`Иднекс массы ${andrey.name} ${andrey.bmi} больше, чем индекс ${vadim.name} ${vadim.bmi}`)
-} else if(andrey < vadim.bmi) {
-    h
-}
+useFun()

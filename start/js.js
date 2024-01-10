@@ -127,7 +127,7 @@ function calcAge() {
 }
 
 function calcExpirience() {
-  this.workExpirience = nowYear - this.workStart;
+  this['workExpirience'] = nowYear - this.workStart;
   return this.workExpirience;
 }
 
