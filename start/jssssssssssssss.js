@@ -127,7 +127,7 @@ function calcAge() {
 }
 
 function calcExpirience() {
-  this['workExpirience'] = nowYear - this.workStart;
+  this["workExpirience"] = nowYear - this.workStart;
   return this.workExpirience;
 }
 
@@ -152,7 +152,7 @@ const userSecond = {
   city: "New York",
   workStart: 2002,
   calcAge,
-  calcExpirience
+  calcExpirience,
 };
 
 const userThree = {
@@ -164,7 +164,7 @@ const userThree = {
   city: "Moskou",
   workStart: 1995,
   calcAge,
-  calcExpirience
+  calcExpirience,
 };
 
 function useFun() {
@@ -177,9 +177,9 @@ function useFun() {
   userOne.calcExpirience();
   userSecond.calcExpirience();
   userThree.calcExpirience();
-  console.log(userOne.workExpirience)
-  console.log(userSecond.workExpirience)
-  console.log(userThree.workExpirience)
+  console.log(userOne.workExpirience);
+  console.log(userSecond.workExpirience);
+  console.log(userThree.workExpirience);
 }
 
-useFun()
+useFun();
